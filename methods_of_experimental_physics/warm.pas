@@ -1,0 +1,1394 @@
+unit warm;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, ExtCtrls, ExtDlgs, math;
+
+type
+  TForm4 = class(TForm)
+    GroupBox1: TGroupBox;
+    Edit1: TEdit;
+    ListBox1: TListBox;
+    Label1: TLabel;
+    Label2: TLabel;
+    Edit3: TEdit;
+    Label5: TLabel;
+    Label6: TLabel;
+    Panel1: TPanel;
+    Panel2: TPanel;
+    ListBox2: TListBox;
+    Panel3: TPanel;
+    Panel4: TPanel;
+    Label7: TLabel;
+    Label8: TLabel;
+    Edit4: TEdit;
+    Label9: TLabel;
+    Label10: TLabel;
+    Edit5: TEdit;
+    Label11: TLabel;
+    Panel5: TPanel;
+    Panel6: TPanel;
+    Label13: TLabel;
+    ListBox3: TListBox;
+    Panel7: TPanel;
+    Panel8: TPanel;
+    GroupBox2: TGroupBox;
+    Label14: TLabel;
+    Label15: TLabel;
+    Label18: TLabel;
+    Label19: TLabel;
+    Label20: TLabel;
+    Label21: TLabel;
+    Label22: TLabel;
+    Label23: TLabel;
+    Label24: TLabel;
+    Label26: TLabel;
+    Edit6: TEdit;
+    ListBox4: TListBox;
+    Edit8: TEdit;
+    Panel9: TPanel;
+    Panel10: TPanel;
+    ListBox5: TListBox;
+    Panel11: TPanel;
+    Panel12: TPanel;
+    Edit9: TEdit;
+    Edit10: TEdit;
+    Panel13: TPanel;
+    Panel14: TPanel;
+    ListBox6: TListBox;
+    Panel15: TPanel;
+    Panel16: TPanel;
+    GroupBox3: TGroupBox;
+    Label27: TLabel;
+    Label28: TLabel;
+    Label31: TLabel;
+    Label32: TLabel;
+    Label33: TLabel;
+    Label34: TLabel;
+    Label35: TLabel;
+    Label36: TLabel;
+    Label37: TLabel;
+    Label39: TLabel;
+    Edit11: TEdit;
+    ListBox7: TListBox;
+    Edit13: TEdit;
+    Panel17: TPanel;
+    Panel18: TPanel;
+    ListBox8: TListBox;
+    Panel19: TPanel;
+    Panel20: TPanel;
+    Edit14: TEdit;
+    Edit15: TEdit;
+    Panel21: TPanel;
+    Panel22: TPanel;
+    ListBox9: TListBox;
+    Panel23: TPanel;
+    Panel24: TPanel;
+    GroupBox4: TGroupBox;
+    Label40: TLabel;
+    Label41: TLabel;
+    Label44: TLabel;
+    Label45: TLabel;
+    Label46: TLabel;
+    Label47: TLabel;
+    Label48: TLabel;
+    Label49: TLabel;
+    Label50: TLabel;
+    Label52: TLabel;
+    Edit16: TEdit;
+    ListBox10: TListBox;
+    Edit18: TEdit;
+    Panel25: TPanel;
+    Panel26: TPanel;
+    ListBox11: TListBox;
+    Panel27: TPanel;
+    Panel28: TPanel;
+    Edit19: TEdit;
+    Edit20: TEdit;
+    Panel29: TPanel;
+    Panel30: TPanel;
+    ListBox12: TListBox;
+    Panel31: TPanel;
+    Panel32: TPanel;
+    Panel33: TPanel;
+    Panel35: TPanel;
+    Panel36: TPanel;
+    PaintBox1: TPaintBox;
+    PaintBox2: TPaintBox;
+    PaintBox3: TPaintBox;
+    PaintBox4: TPaintBox;
+    Panel37: TPanel;
+    Panel38: TPanel;
+    Panel39: TPanel;
+    Panel40: TPanel;
+    GroupBox5: TGroupBox;
+    Label53: TLabel;
+    Edit21: TEdit;
+    Label54: TLabel;
+    Label56: TLabel;
+    Label57: TLabel;
+    Label58: TLabel;
+    Panel41: TPanel;
+    Panel42: TPanel;
+    Panel45: TPanel;
+    Panel46: TPanel;
+    Panel49: TPanel;
+    Panel50: TPanel;
+    Panel53: TPanel;
+    Panel54: TPanel;
+    Panel43: TPanel;
+    Panel44: TPanel;
+    Panel47: TPanel;
+    Panel48: TPanel;
+    SavePictureDialog1: TSavePictureDialog;
+    Label12: TLabel;
+    Label3: TLabel;
+    Edit2: TEdit;
+    Label4: TLabel;
+    Label16: TLabel;
+    Edit7: TEdit;
+    Label17: TLabel;
+    SaveDialog1: TSaveDialog;
+    OpenDialog1: TOpenDialog;
+    procedure Panel1Click(Sender: TObject);
+    procedure Panel9Click(Sender: TObject);
+    procedure Panel17Click(Sender: TObject);
+    procedure Panel25Click(Sender: TObject);
+    procedure Panel3Click(Sender: TObject);
+    procedure Panel11Click(Sender: TObject);
+    procedure Panel19Click(Sender: TObject);
+    procedure Panel27Click(Sender: TObject);
+    procedure Panel5Click(Sender: TObject);
+    procedure Panel13Click(Sender: TObject);
+    procedure Panel21Click(Sender: TObject);
+    procedure Panel29Click(Sender: TObject);
+    procedure Panel40Click(Sender: TObject);
+    procedure Panel2Click(Sender: TObject);
+    procedure Panel4Click(Sender: TObject);
+    procedure Panel6Click(Sender: TObject);
+    procedure Panel10Click(Sender: TObject);
+    procedure Panel12Click(Sender: TObject);
+    procedure Panel14Click(Sender: TObject);
+    procedure Panel18Click(Sender: TObject);
+    procedure Panel20Click(Sender: TObject);
+    procedure Panel22Click(Sender: TObject);
+    procedure Panel26Click(Sender: TObject);
+    procedure Panel28Click(Sender: TObject);
+    procedure Panel30Click(Sender: TObject);
+    procedure Panel7Click(Sender: TObject);
+    procedure Panel15Click(Sender: TObject);
+    procedure Panel23Click(Sender: TObject);
+    procedure Panel31Click(Sender: TObject);
+    procedure Panel8Click(Sender: TObject);
+    procedure Panel16Click(Sender: TObject);
+    procedure Panel24Click(Sender: TObject);
+    procedure Panel32Click(Sender: TObject);
+    procedure Panel37Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure PaintBox1MouseMove(Sender: TObject; Shift: TShiftState; X,
+      Y: Integer);
+    procedure PaintBox2MouseMove(Sender: TObject; Shift: TShiftState; X,
+      Y: Integer);
+    procedure PaintBox3MouseMove(Sender: TObject; Shift: TShiftState; X,
+      Y: Integer);
+    procedure PaintBox4MouseMove(Sender: TObject; Shift: TShiftState; X,
+      Y: Integer);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
+    procedure Panel41Click(Sender: TObject);
+    procedure Panel45Click(Sender: TObject);
+    procedure Panel49Click(Sender: TObject);
+    procedure Panel53Click(Sender: TObject);
+    procedure Panel42Click(Sender: TObject);
+    procedure Panel46Click(Sender: TObject);
+    procedure Panel50Click(Sender: TObject);
+    procedure Panel54Click(Sender: TObject);
+    procedure datenlesen;
+    procedure Panel33Click(Sender: TObject);
+    procedure Panel35Click(Sender: TObject);
+    procedure Panel36Click(Sender: TObject);
+    procedure berechnung(subst:byte);
+    procedure Panel43Click(Sender: TObject);
+    procedure Panel44Click(Sender: TObject);
+    procedure Panel47Click(Sender: TObject);
+    procedure Panel48Click(Sender: TObject);
+    procedure Panel39Click(Sender: TObject);
+    procedure neuneu;
+    procedure Panel38Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+  type Tsubstanz=record
+  masse:extended;
+  ct:integer;
+  
+  temp:array[0..21] of extended;
+  V,A:array[0..4] of extended;
+  end;
+
+
+  type TWarmsave = record
+  substanz:array[0..3] of Tsubstanz;
+  waage:extended;
+  wasserk,wassera:extended;
+  end;
+
+
+var
+  Form4: TForm4;
+  pic:array[0..3] of Tbitmap;
+  Warmsave:TWarmsave;
+  deltaQ,deltaT,sdQ,sdT:array[0..3] of extended;
+  cW,cK,cA,W,scW,scK,scA,sW:extended;
+  F:file of TWarmsave;
+
+implementation
+
+uses main;
+
+{$R *.dfm}
+
+procedure TForm4.Panel1Click(Sender: TObject);
+begin
+if (listbox1.Items.count<22) and (edit3.text<>'')
+then
+listbox1.Items.add(edit3.text);           //Messwerte Wasser 1 hinzufügen
+edit3.text:='';
+end;
+
+procedure TForm4.Panel9Click(Sender: TObject);
+begin
+if (listbox4.Items.count<22) and (edit8.text<>'')
+then
+listbox4.Items.add(edit8.text);           //Messwerte Wasser 2 hinzufügen
+edit8.text:='';
+end;
+
+procedure TForm4.Panel17Click(Sender: TObject);
+begin
+if (listbox7.Items.count<22) and (edit13.text<>'')
+then
+listbox7.Items.add(edit13.text);           //Messwerte Kupfer hinzufügen
+edit13.text:='';
+end;
+
+procedure TForm4.Panel25Click(Sender: TObject);
+begin
+if (listbox10.Items.count<22) and (edit18.text<>'')
+then
+listbox10.Items.add(edit18.text);           //Messwerte Aluminum hinzufügen
+edit18.text:='';
+end;
+
+procedure TForm4.Panel3Click(Sender: TObject);
+begin
+if (listbox2.Items.count<5) and (edit4.text<>'')
+then
+listbox2.Items.add(edit4.text);           //Messwerte Spannung Wasser 1 hinzufügen
+edit4.text:='';
+end;
+
+procedure TForm4.Panel11Click(Sender: TObject);
+begin
+if (listbox5.Items.count<5) and (edit9.text<>'')
+then
+listbox5.Items.add(edit9.text);           //Messwerte Spannung Wasser 2 hinzufügen
+edit9.text:='';
+end;
+
+procedure TForm4.Panel19Click(Sender: TObject);
+begin
+if (listbox8.Items.count<5) and (edit14.text<>'')
+then
+listbox8.Items.add(edit14.text);           //Messwerte Spannung Kupfer hinzufügen
+edit14.text:='';
+end;
+
+procedure TForm4.Panel27Click(Sender: TObject);
+begin
+if (listbox11.Items.count<5) and (edit19.text<>'')
+then
+listbox11.Items.add(edit19.text);           //Messwerte Spannung Aluminum hinzufügen
+edit19.text:='';
+end;
+
+procedure TForm4.Panel5Click(Sender: TObject);
+begin
+if (listbox3.Items.count<5) and (edit5.text<>'')
+then
+listbox3.Items.add(edit5.text);           //Messwerte Strom Wasser 1 hinzufügen
+edit5.text:='';
+end;
+
+procedure TForm4.Panel13Click(Sender: TObject);
+begin
+
+if (listbox6.Items.count<5) and (edit10.text<>'')
+then
+listbox6.Items.add(edit10.text);           //Messwerte Strom Wasser 2 hinzufügen
+edit10.text:='';
+end;
+
+procedure TForm4.Panel21Click(Sender: TObject);
+begin
+
+if (listbox9.Items.count<5) and (edit15.text<>'')
+then
+listbox9.Items.add(edit15.text);           //Messwerte Strom Kupfer hinzufügen
+edit15.text:='';
+end;
+
+procedure TForm4.Panel29Click(Sender: TObject);
+begin   
+
+if (listbox12.Items.count<5) and (edit20.text<>'')
+then
+listbox12.Items.add(edit20.text);           //Messwerte Strom Aluminum hinzufügen
+edit20.text:='';
+end;
+
+procedure TForm4.Panel40Click(Sender: TObject);
+begin
+form4.visible:=false;
+form1.visible:=true;    //Ins Hauptmenü wechseln
+end;
+
+procedure TForm4.Panel2Click(Sender: TObject);
+var a,i:integer;
+begin
+a:=-1;
+for i:=0 to listbox1.items.count-1 do
+if listbox1.Selected[i]=true                     //Messwert Wasser 1 löschen
+then
+a:=i;
+
+if a<>-1
+then
+listbox1.Items.Delete(a);
+
+
+end;
+
+procedure TForm4.Panel4Click(Sender: TObject);
+var a,i:integer;
+begin
+a:=-1;
+for i:=0 to listbox2.items.count-1 do
+if listbox2.Selected[i]=true                     //Messwert Spannung Wasser 1 löschen
+then
+a:=i;
+
+if a<>-1
+then
+listbox2.Items.Delete(a);
+
+
+end;
+
+procedure TForm4.Panel6Click(Sender: TObject);
+var a,i:integer;
+begin
+a:=-1;
+for i:=0 to listbox3.items.count-1 do
+if listbox3.Selected[i]=true                     //Messwert Strom Wasser 1 löschen
+then
+a:=i;
+
+if a<>-1
+then
+listbox3.Items.Delete(a);
+
+end;
+
+procedure TForm4.Panel10Click(Sender: TObject);
+var a,i:integer;
+begin
+a:=-1;
+for i:=0 to listbox4.items.count-1 do
+if listbox4.Selected[i]=true                     //Messwert Wasser 2 löschen
+then
+a:=i;
+
+if a<>-1
+then
+listbox4.Items.Delete(a);
+
+end;
+
+procedure TForm4.Panel12Click(Sender: TObject);
+var a,i:integer;
+begin
+a:=-1;
+for i:=0 to listbox5.items.count-1 do
+if listbox5.Selected[i]=true                     //Messwert Spannung Wasser 2 löschen
+then
+a:=i;
+
+if a<>-1
+then
+listbox5.Items.Delete(a);
+
+end;
+
+procedure TForm4.Panel14Click(Sender: TObject);
+var a,i:integer;
+begin
+a:=-1;
+for i:=0 to listbox6.items.count-1 do
+if listbox6.Selected[i]=true                     //Messwert Strom Wasser 2 löschen
+then
+a:=i;
+
+if a<>-1
+then
+listbox6.Items.Delete(a);
+
+end;
+
+procedure TForm4.Panel18Click(Sender: TObject);
+var a,i:integer;
+begin
+a:=-1;
+for i:=0 to listbox7.items.count-1 do
+if listbox7.Selected[i]=true                     //Messwert Kupfer löschen
+then
+a:=i;
+
+if a<>-1
+then
+listbox7.Items.Delete(a);
+
+end;
+
+procedure TForm4.Panel20Click(Sender: TObject);
+var a,i:integer;
+begin
+a:=-1;
+for i:=0 to listbox8.items.count-1 do
+if listbox8.Selected[i]=true                     //Messwert Spannung Kupfer löschen
+then
+a:=i;
+
+if a<>-1
+then
+listbox8.Items.Delete(a);
+
+end;
+
+procedure TForm4.Panel22Click(Sender: TObject);
+var a,i:integer;
+begin
+a:=-1;
+for i:=0 to listbox9.items.count-1 do
+if listbox9.Selected[i]=true                     //Messwert Strom löschen
+then
+a:=i;
+
+if a<>-1
+then
+listbox9.Items.Delete(a);
+
+end;
+
+procedure TForm4.Panel26Click(Sender: TObject);
+var a,i:integer;
+begin
+a:=-1;
+for i:=0 to listbox10.items.count-1 do
+if listbox10.Selected[i]=true                     //Messwert Aluminium löschen
+then
+a:=i;
+
+if a<>-1
+then
+listbox10.Items.Delete(a);
+
+end;
+
+procedure TForm4.Panel28Click(Sender: TObject);
+var a,i:integer;
+begin
+a:=-1;
+for i:=0 to listbox11.items.count-1 do
+if listbox11.Selected[i]=true                     //Messwert Spannung Aluminium löschen
+then
+a:=i;
+
+if a<>-1
+then
+listbox11.Items.Delete(a);
+
+end;
+
+procedure TForm4.Panel30Click(Sender: TObject);
+var a,i:integer;
+begin
+a:=-1;
+for i:=0 to listbox12.items.count-1 do
+if listbox12.Selected[i]=true                     //Messwert Strom Aluminium löschen
+then
+a:=i;
+
+if a<>-1
+then
+listbox12.Items.Delete(a);
+
+end;
+
+procedure TForm4.Panel7Click(Sender: TObject);
+begin
+if (listbox1.Items.count-1<>listbox1.itemindex) and (listbox1.items.count>0)
+then                           //Hinauf
+listbox1.items.Exchange(listbox1.itemindex,listbox1.itemindex+1);
+end;
+
+procedure TForm4.Panel15Click(Sender: TObject);
+begin
+if (listbox4.Items.count-1<>listbox4.itemindex) and (listbox4.items.count>0)
+then                           //Hinauf
+listbox4.items.Exchange(listbox4.itemindex,listbox4.itemindex+1);
+end;
+
+procedure TForm4.Panel23Click(Sender: TObject);
+begin
+if (listbox7.Items.count-1<>listbox7.itemindex) and (listbox7.items.count>0)
+then                           //Hinauf
+listbox7.items.Exchange(listbox7.itemindex,listbox7.itemindex+1);
+end;
+
+procedure TForm4.Panel31Click(Sender: TObject);
+begin
+if (listbox10.Items.count-1<>listbox10.itemindex) and (listbox10.items.count>0)
+then                           //Hinauf
+listbox10.items.Exchange(listbox10.itemindex,listbox10.itemindex+1);
+end;
+
+procedure TForm4.Panel8Click(Sender: TObject);
+begin
+if (0<>listbox1.itemindex) and (listbox1.items.count>0)
+then                //Abwärts
+listbox1.items.Exchange(listbox1.itemindex,listbox1.itemindex-1);
+end;
+
+procedure TForm4.Panel16Click(Sender: TObject);
+begin
+if (0<>listbox4.itemindex) and (listbox4.items.count>0)
+then                //Abwärts
+listbox4.items.Exchange(listbox4.itemindex,listbox4.itemindex-1);
+end;
+
+procedure TForm4.Panel24Click(Sender: TObject);
+begin
+if (0<>listbox7.itemindex) and (listbox7.items.count>0)
+then                //Abwärts
+listbox7.items.Exchange(listbox7.itemindex,listbox7.itemindex-1);
+end;
+
+procedure TForm4.Panel32Click(Sender: TObject);
+begin
+if (0<>listbox10.itemindex) and (listbox10.items.count>0)
+then                //Abwärts
+listbox10.items.Exchange(listbox10.itemindex,listbox10.itemindex-1);
+end;
+
+procedure TForm4.Panel37Click(Sender: TObject);
+begin
+//Neu
+neuneu;
+end;
+
+procedure TForm4.FormCreate(Sender: TObject);
+var i:integer;
+begin
+for i:=0 to 3 do
+begin
+pic[i]:=TBitmap.create;
+pic[i].Width:=250;
+pic[i].Height:=150;
+pic[i].canvas.brush.color:=clwhite;
+pic[i].Canvas.FillRect(rect(0,0,250,150));
+pic[i].Canvas.pen.Color:=clBlack;
+pic[i].Canvas.MoveTo(0,125);                  //Grafiken vorbereiten
+pic[i].canvas.LineTo(250,125);
+pic[i].Canvas.MoveTo(25,0);
+pic[i].Canvas.lineto(25,150);
+pic[i].canvas.pixels[26,85]:=clBlack;
+pic[i].canvas.pixels[27,85]:=clBlack;
+pic[i].canvas.pixels[24,85]:=clBlack;
+pic[i].canvas.pixels[45,124]:=clBlack;
+pic[i].canvas.pixels[45,123]:=clBlack;
+pic[i].canvas.pixels[45,126]:=clBlack;
+end; 
+
+paintbox1.Canvas.draw(0,0,pic[0]);
+paintbox2.Canvas.draw(0,0,pic[1]);
+paintbox3.Canvas.draw(0,0,pic[2]);
+paintbox4.Canvas.draw(0,0,pic[3]);
+
+cW:=0;
+cA:=0;
+cK:=0;
+W:=0;
+scW:=0;
+scK:=0;
+scA:=0;
+sW:=0;
+
+end;
+
+procedure TForm4.PaintBox1MouseMove(Sender: TObject; Shift: TShiftState; X,
+  Y: Integer);
+begin
+paintbox1.Canvas.draw(0,0,pic[0]);                               //Grafik zeigen
+end;
+
+procedure TForm4.PaintBox2MouseMove(Sender: TObject; Shift: TShiftState; X,
+  Y: Integer);
+begin
+paintbox2.Canvas.draw(0,0,pic[1]);                //Grafik zeigen
+end;
+
+procedure TForm4.PaintBox3MouseMove(Sender: TObject; Shift: TShiftState; X,
+  Y: Integer);
+begin
+paintbox3.Canvas.draw(0,0,pic[2]); //Grafik zeigen
+end;
+
+procedure TForm4.PaintBox4MouseMove(Sender: TObject; Shift: TShiftState; X,
+  Y: Integer);
+begin
+paintbox4.Canvas.draw(0,0,pic[3]); //Grafik zeigen
+end;
+
+procedure TForm4.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+form4.visible:=false;
+form1.visible:=true;    //Ins Hauptmenü wechseln
+end;
+
+procedure TForm4.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
+begin
+form4.visible:=false;
+form1.visible:=true;    //Ins Hauptmenü wechseln
+end;
+
+procedure TForm4.Panel41Click(Sender: TObject);
+var i:integer;
+    T0,Tt:extended;
+begin
+if listbox1.Items.Count>0
+then
+begin
+pic[0].canvas.brush.color:=clwhite;
+pic[0].Canvas.FillRect(rect(0,0,250,150));
+pic[0].Canvas.pen.Color:=clBlack;
+pic[0].Canvas.MoveTo(0,125);                  //Grafik löschen
+pic[0].canvas.LineTo(250,125);
+pic[0].Canvas.MoveTo(25,0);
+pic[0].Canvas.lineto(25,150);
+pic[0].canvas.pixels[26,85]:=clBlack;
+pic[0].canvas.pixels[27,85]:=clBlack;
+pic[0].canvas.pixels[24,85]:=clBlack;
+pic[0].canvas.pixels[45,124]:=clBlack;
+pic[0].canvas.pixels[45,123]:=clBlack;
+pic[0].canvas.pixels[45,126]:=clBlack;
+
+pic[0].Canvas.pen.color:=clred;
+pic[0].Canvas.moveto(25,125);                    //Nullpunkt setzen
+T0:=strtofloat(listbox1.Items.Strings[0]);
+for i:=1 to listbox1.Items.Count-1 do
+begin
+Tt:=strtofloat(listbox1.Items.Strings[i]);            //Linie Zeichnen
+pic[0].canvas.lineto(25+(i*10),125-round((Tt-T0)*4));
+end;
+
+paintbox1.canvas.draw(0,0,pic[0]);
+end;
+end;
+
+procedure TForm4.Panel45Click(Sender: TObject);
+var i:integer;
+    T0,Tt:extended;
+begin
+if listbox4.Items.Count>0
+then
+begin
+pic[1].canvas.brush.color:=clwhite;
+pic[1].Canvas.FillRect(rect(0,0,250,150));
+pic[1].Canvas.pen.Color:=clBlack;
+pic[1].Canvas.MoveTo(0,125);                  //Grafik löschen
+pic[1].canvas.LineTo(250,125);
+pic[1].Canvas.MoveTo(25,0);
+pic[1].Canvas.lineto(25,150);
+pic[1].canvas.pixels[26,85]:=clBlack;
+pic[1].canvas.pixels[27,85]:=clBlack;
+pic[1].canvas.pixels[24,85]:=clBlack;
+pic[1].canvas.pixels[45,124]:=clBlack;
+pic[1].canvas.pixels[45,123]:=clBlack;
+pic[1].canvas.pixels[45,126]:=clBlack;
+
+pic[1].Canvas.pen.color:=clred;
+pic[1].Canvas.moveto(25,125);                    //Nullpunkt setzen
+T0:=strtofloat(listbox4.Items.Strings[0]);
+for i:=1 to listbox4.Items.Count-1 do
+begin
+Tt:=strtofloat(listbox4.Items.Strings[i]);            //Linie Zeichnen
+pic[1].canvas.lineto(25+(i*10),125-round((Tt-T0)*4));
+end;
+
+paintbox2.canvas.draw(0,0,pic[1]);
+end;
+end;
+
+procedure TForm4.Panel49Click(Sender: TObject);
+var i:integer;
+    T0,Tt:extended;
+begin
+if listbox7.Items.Count>0
+then
+begin
+pic[2].canvas.brush.color:=clwhite;
+pic[2].Canvas.FillRect(rect(0,0,250,150));
+pic[2].Canvas.pen.Color:=clBlack;
+pic[2].Canvas.MoveTo(0,125);                  //Grafik löschen
+pic[2].canvas.LineTo(250,125);
+pic[2].Canvas.MoveTo(25,0);
+pic[2].Canvas.lineto(25,150);
+pic[2].canvas.pixels[26,85]:=clBlack;
+pic[2].canvas.pixels[27,85]:=clBlack;
+pic[2].canvas.pixels[24,85]:=clBlack;
+pic[2].canvas.pixels[45,124]:=clBlack;
+pic[2].canvas.pixels[45,123]:=clBlack;
+pic[2].canvas.pixels[45,126]:=clBlack;
+
+pic[2].Canvas.pen.color:=clred;
+pic[2].Canvas.moveto(25,125);                    //Nullpunkt setzen
+T0:=strtofloat(listbox7.Items.Strings[0]);
+for i:=1 to listbox7.Items.Count-1 do
+begin
+Tt:=strtofloat(listbox7.Items.Strings[i]);            //Linie Zeichnen
+pic[2].canvas.lineto(25+(i*10),125-round((Tt-T0)*4));
+end;
+
+paintbox3.canvas.draw(0,0,pic[2]);
+end;
+end;
+
+procedure TForm4.Panel53Click(Sender: TObject);
+var i:integer;
+    T0,Tt:extended;
+begin
+if listbox10.Items.Count>0
+then
+begin
+pic[3].canvas.brush.color:=clwhite;
+pic[3].Canvas.FillRect(rect(0,0,250,150));
+pic[3].Canvas.pen.Color:=clBlack;
+pic[3].Canvas.MoveTo(0,125);                  //Grafik löschen
+pic[3].canvas.LineTo(250,125);
+pic[3].Canvas.MoveTo(25,0);
+pic[3].Canvas.lineto(25,150);
+pic[3].canvas.pixels[26,85]:=clBlack;
+pic[3].canvas.pixels[27,85]:=clBlack;
+pic[3].canvas.pixels[24,85]:=clBlack;
+pic[3].canvas.pixels[45,124]:=clBlack;
+pic[3].canvas.pixels[45,123]:=clBlack;
+pic[3].canvas.pixels[45,126]:=clBlack;
+
+pic[3].Canvas.pen.color:=clred;
+pic[3].Canvas.moveto(25,125);                    //Nullpunkt setzen
+T0:=strtofloat(listbox10.Items.Strings[0]);
+for i:=1 to listbox10.Items.Count-1 do
+begin
+Tt:=strtofloat(listbox10.Items.Strings[i]);            //Linie Zeichnen
+pic[3].canvas.lineto(25+(i*10),125-round((Tt-T0)*4));
+end;
+
+paintbox4.canvas.draw(0,0,pic[3]);
+end;
+end;
+
+procedure TForm4.Panel42Click(Sender: TObject);
+var i:integer;
+    T1,T2,dT:extended;
+begin
+if listbox1.Items.Count>0
+then
+begin
+pic[0].canvas.brush.color:=clwhite;
+pic[0].Canvas.FillRect(rect(0,0,250,150));
+pic[0].Canvas.pen.Color:=clBlack;
+pic[0].Canvas.MoveTo(0,75);                  //Grafik löschen
+pic[0].canvas.LineTo(250,75);
+pic[0].Canvas.MoveTo(25,0);
+pic[0].Canvas.lineto(25,150);
+
+pic[0].canvas.pixels[26,50]:=clBlack;
+pic[0].canvas.pixels[27,50]:=clBlack;
+pic[0].canvas.pixels[24,50]:=clBlack;
+
+pic[0].canvas.pixels[45,74]:=clBlack;
+pic[0].canvas.pixels[45,73]:=clBlack;
+pic[0].canvas.pixels[45,76]:=clBlack;
+pic[0].canvas.pixels[45,77]:=clBlack;
+
+pic[0].Canvas.pen.color:=clred;
+T1:=strtofloat(listbox1.Items.Strings[0]);
+T2:=strtofloat(listbox1.Items.Strings[1]);
+dt:=t2-t1;
+pic[0].Canvas.moveto(25,75-ROUND(dt*25));                    //Nullpunkt setzen
+
+for i:=1 to listbox1.Items.Count-2 do
+begin
+T1:=strtofloat(listbox1.Items.Strings[i]);            //Linie Zeichnen
+T2:=strtofloat(listbox1.Items.Strings[i+1]);
+dt:=t2-t1;
+pic[0].canvas.lineto(25+(i*10),75-ROUND(dt*25));
+end;
+
+paintbox1.canvas.draw(0,0,pic[0]);
+end;
+end;
+
+procedure TForm4.Panel46Click(Sender: TObject);
+var i:integer;
+    T1,T2,dT:extended;
+begin
+if listbox4.Items.Count>0
+then
+begin
+pic[1].canvas.brush.color:=clwhite;
+pic[1].Canvas.FillRect(rect(0,0,250,150));
+pic[1].Canvas.pen.Color:=clBlack;
+pic[1].Canvas.MoveTo(0,75);                  //Grafik löschen
+pic[1].canvas.LineTo(250,75);
+pic[1].Canvas.MoveTo(25,0);
+pic[1].Canvas.lineto(25,150);
+
+pic[1].canvas.pixels[26,50]:=clBlack;
+pic[1].canvas.pixels[27,50]:=clBlack;
+pic[1].canvas.pixels[24,50]:=clBlack;
+
+pic[1].canvas.pixels[45,74]:=clBlack;
+pic[1].canvas.pixels[45,73]:=clBlack;
+pic[1].canvas.pixels[45,76]:=clBlack;
+pic[1].canvas.pixels[45,77]:=clBlack;
+
+pic[1].Canvas.pen.color:=clred;
+T1:=strtofloat(listbox4.Items.Strings[0]);
+T2:=strtofloat(listbox4.Items.Strings[1]);
+dt:=t2-t1;
+pic[1].Canvas.moveto(25,75-ROUND(dt*25));                    //Nullpunkt setzen
+
+for i:=1 to listbox4.Items.Count-2 do
+begin
+T1:=strtofloat(listbox4.Items.Strings[i]);            //Linie Zeichnen
+T2:=strtofloat(listbox4.Items.Strings[i+1]);
+dt:=t2-t1;
+pic[1].canvas.lineto(25+(i*10),75-ROUND(dt*25));
+end;
+
+paintbox2.canvas.draw(0,0,pic[1]);
+end;
+
+end;
+
+procedure TForm4.Panel50Click(Sender: TObject);
+var i:integer;
+    T1,T2,dT:extended;
+begin
+if listbox1.Items.Count>0
+then
+begin
+pic[2].canvas.brush.color:=clwhite;
+pic[2].Canvas.FillRect(rect(0,0,250,150));
+pic[2].Canvas.pen.Color:=clBlack;
+pic[2].Canvas.MoveTo(0,75);                  //Grafik löschen
+pic[2].canvas.LineTo(250,75);
+pic[2].Canvas.MoveTo(25,0);
+pic[2].Canvas.lineto(25,150);
+
+pic[2].canvas.pixels[26,50]:=clBlack;
+pic[2].canvas.pixels[27,50]:=clBlack;
+pic[2].canvas.pixels[24,50]:=clBlack;
+
+pic[3].canvas.pixels[45,74]:=clBlack;
+pic[3].canvas.pixels[45,73]:=clBlack;
+pic[3].canvas.pixels[45,76]:=clBlack;
+pic[3].canvas.pixels[45,77]:=clBlack;
+
+pic[2].Canvas.pen.color:=clred;
+T1:=strtofloat(listbox7.Items.Strings[0]);
+T2:=strtofloat(listbox7.Items.Strings[1]);
+dt:=t2-t1;
+pic[2].Canvas.moveto(25,75-ROUND(dt*25));                    //Nullpunkt setzen
+
+for i:=1 to listbox7.Items.Count-2 do
+begin
+T1:=strtofloat(listbox7.Items.Strings[i]);            //Linie Zeichnen
+T2:=strtofloat(listbox7.Items.Strings[i+1]);
+dt:=t2-t1;
+pic[2].canvas.lineto(25+(i*10),75-ROUND(dt*25));
+end;
+
+paintbox3.canvas.draw(0,0,pic[2]);
+end;
+
+end;
+
+procedure TForm4.Panel54Click(Sender: TObject);
+var i:integer;
+    T1,T2,dT:extended;
+begin
+if listbox10.Items.Count>0
+then
+begin
+pic[3].canvas.brush.color:=clwhite;
+pic[3].Canvas.FillRect(rect(0,0,250,150));
+pic[3].Canvas.pen.Color:=clBlack;
+pic[3].Canvas.MoveTo(0,75);                  //Grafik löschen
+pic[3].canvas.LineTo(250,75);
+pic[3].Canvas.MoveTo(25,0);
+pic[3].Canvas.lineto(25,150);
+
+pic[3].canvas.pixels[26,50]:=clBlack;
+pic[3].canvas.pixels[27,50]:=clBlack;
+pic[3].canvas.pixels[24,50]:=clBlack;
+
+pic[3].canvas.pixels[45,74]:=clBlack;
+pic[3].canvas.pixels[45,73]:=clBlack;
+pic[3].canvas.pixels[45,76]:=clBlack;
+pic[3].canvas.pixels[45,77]:=clBlack;
+
+pic[3].Canvas.pen.color:=clred;
+T1:=strtofloat(listbox10.Items.Strings[0]);
+T2:=strtofloat(listbox10.Items.Strings[1]);
+dt:=t2-t1;
+pic[3].Canvas.moveto(25,75-ROUND(dt*25));                    //Nullpunkt setzen
+
+for i:=1 to listbox1.Items.Count-2 do
+begin
+T1:=strtofloat(listbox10.Items.Strings[i]);            //Linie Zeichnen
+T2:=strtofloat(listbox10.Items.Strings[i+1]);
+dt:=t2-t1;
+pic[3].canvas.lineto(25+(i*10),75-ROUND(dt*25));
+end;
+
+paintbox4.canvas.draw(0,0,pic[3]);
+end;
+
+end;
+
+  procedure Tform4.datenlesen;
+  var i:integer;
+  begin
+                    //Daten in Record lesen
+
+  for i:=0 to listbox1.Items.Count-1 do
+  Warmsave.substanz[0].temp[i]:=strtofloat(listbox1.Items.Strings[i]);
+  Warmsave.substanz[0].ct:=listbox1.Items.Count-1;
+
+  for i:=0 to listbox4.Items.Count-1 do
+  Warmsave.substanz[1].temp[i]:=strtofloat(listbox4.Items.Strings[i]);
+  Warmsave.substanz[1].ct:=listbox4.Items.Count-1;
+
+  for i:=0 to listbox7.Items.Count-1 do
+  Warmsave.substanz[2].temp[i]:=strtofloat(listbox7.Items.Strings[i]);
+  Warmsave.substanz[2].ct:=listbox7.Items.Count-1;
+
+  for i:=0 to listbox10.Items.Count-1 do
+  Warmsave.substanz[3].temp[i]:=strtofloat(listbox10.Items.Strings[i]);
+  Warmsave.substanz[3].ct:=listbox10.Items.Count-1;
+
+  for i:=0 to listbox2.Items.Count-1 do
+  warmsave.substanz[0].V[i]:=strtofloat(listbox2.Items.Strings[i]);
+  for i:=0 to listbox3.Items.Count-1 do
+  warmsave.substanz[0].A[i]:=strtofloat(listbox3.Items.Strings[i]);
+
+  for i:=0 to listbox5.Items.Count-1 do
+  warmsave.substanz[1].V[i]:=strtofloat(listbox5.Items.Strings[i]);
+  for i:=0 to listbox6.Items.Count-1 do
+  warmsave.substanz[1].A[i]:=strtofloat(listbox6.Items.Strings[i]);
+
+  for i:=0 to listbox8.Items.Count-1 do
+  warmsave.substanz[2].V[i]:=strtofloat(listbox8.Items.Strings[i]);
+  for i:=0 to listbox9.Items.Count-1 do
+  warmsave.substanz[2].A[i]:=strtofloat(listbox9.Items.Strings[i]);
+
+  for i:=0 to listbox11.Items.Count-1 do
+  warmsave.substanz[3].V[i]:=strtofloat(listbox11.Items.Strings[i]);
+  for i:=0 to listbox12.Items.Count-1 do
+  warmsave.substanz[3].A[i]:=strtofloat(listbox12.Items.Strings[i]);
+
+
+  warmsave.substanz[0].masse:=strtofloat(edit1.text);
+
+  warmsave.substanz[1].masse:=strtofloat(edit6.text);
+
+  warmsave.substanz[2].masse:=strtofloat(edit11.text);
+
+  warmsave.substanz[3].masse:=strtofloat(edit16.text);
+
+  warmsave.waage:=strtofloat(edit21.Text);
+
+  warmsave.wasserk:=strtofloat(edit2.text);
+
+   warmsave.wassera:=strtofloat(edit7.text);
+
+
+  end;
+
+
+procedure TForm4.Panel33Click(Sender: TObject);
+begin
+datenlesen;        //starte Berechnung
+berechnung(0);
+berechnung(1);
+end;
+
+procedure TForm4.Panel35Click(Sender: TObject);
+begin
+datenlesen;       //starte Berechnung
+berechnung(0);
+berechnung(1);
+berechnung(2);
+end;
+
+procedure TForm4.Panel36Click(Sender: TObject);
+begin
+datenlesen;     //starte Berechnung
+berechnung(0);
+berechnung(1);
+berechnung(3);
+end;
+
+procedure Tform4.berechnung(subst:byte);
+var mV,mA,sigmaV,sigmaA,h,mdT,sigmadt:extended;
+    i:integer;
+begin                    //Berechnung der Werte
+mV:=0;
+mA:=0;
+sigmaV:=0;
+sigmaA:=0;
+
+for i:=0 to 4 do
+begin
+mV:=mV+warmsave.substanz[subst].V[i];
+mA:=mA+warmsave.substanz[subst].A[i];
+end;
+mV:=mV/5;                     //Mittelwert und Standardabweichung von Strom und Spannung berechnen
+mA:=mA/5;
+
+for i:=0 to 4 do
+begin
+h:=warmsave.substanz[subst].V[i]-mV;
+sigmaV:=sigmaV+h*h;
+h:=warmsave.substanz[subst].A[i]-mA;
+sigmaA:=sigmaA+h*h;
+end;
+sigmaV:=sigmaV/4;
+sigmaA:=sigmaA/4;
+sigmaV:=sqrt(sigmaV);
+sigmaA:=sqrt(sigmaA);
+
+mdt:=warmsave.substanz[subst].temp[warmsave.substanz[subst].ct]-warmsave.substanz[subst].temp[0];
+mdt:=(mdt/(warmsave.substanz[subst].ct-1))/30;      //Mittlere Temperaturänderung pro sec mit vereinfachter Formel
+
+sigmadt:=0;
+for i:=0 to warmsave.substanz[subst].ct-1 do
+begin
+h:=((warmsave.substanz[subst].temp[i+1]-warmsave.substanz[subst].temp[i])/30)-mdt;
+sigmadt:=sigmadt+h*h;
+end;                              //Sigma Temperaturänderung
+sigmadt:=sigmadt/(warmsave.substanz[subst].ct-1);
+sigmadt:=sqrt(sigmadt);
+
+deltaT[subst]:=mdt;
+sdt[subst]:=sigmadt;
+
+deltaQ[subst]:=mA*mV; // *30*warmsave.substanz[subst].ct
+sdq[subst]:=abs((sigmaV/mV+sigmaA/mV)*deltaQ[subst]);       //Heizenergie
+ //simga über Potenzgesetz
+
+
+
+Case subst of
+0:begin
+Label13.Caption:='mittlere Temperaturänderung: ('+floattostr(roundto(mdt,-4))+' +- '+floattostr(roundto(sigmadt,-4))+' ) K/sec';
+Label7.Caption:='Heizleistung: ('+floattostr(roundto(deltaQ[0],-4))+' +- '+floattostr(roundto(sdq[0],-4))+' ) J';
+end;
+1:begin
+cW:=1/(warmsave.substanz[1].masse-warmsave.substanz[0].masse)*((deltaQ[1]/deltaT[1])-(deltaQ[0]/deltaT[0]));
+
+W:=1/(warmsave.substanz[1].masse-warmsave.substanz[0].masse)*((deltaQ[0]/deltaT[0]*warmsave.substanz[1].masse)-(warmsave.substanz[0].masse*deltaQ[1]/deltaT[1]));
+
+scW:=2*sqr(1/sqr(warmsave.substanz[1].masse-warmsave.substanz[0].masse)*(deltaQ[1]/deltaT[1]-deltaQ[0]/deltaT[0]))*sqr(warmsave.waage);
+scW:=scW+(sqr(1/((warmsave.substanz[1].masse-warmsave.substanz[0].masse)*deltaT[1]))*sqr(sdq[1]));
+scW:=scW+(sqr(1/((warmsave.substanz[1].masse-warmsave.substanz[0].masse)*deltaT[0]))*sqr(sdq[0]));
+scW:=scW+(sqr((1/(warmsave.substanz[1].masse-warmsave.substanz[0].masse))*(deltaQ[0]-deltaT[0])/sqr(deltaT[0]))*sqr(sdt[0]));
+scW:=scW+(sqr((1/(warmsave.substanz[1].masse-warmsave.substanz[0].masse))*(deltaT[1]-deltaQ[1])/sqr(deltaT[1]))*sqr(sdt[1]));
+scW:=sqrt(scW);
+
+sW:=sqr(1/(warmsave.substanz[1].masse-warmsave.substanz[0].masse)*((-deltaQ[1]/deltaT[1]*(warmsave.substanz[1].masse-warmsave.substanz[0].masse))+((deltaQ[0]/deltaT[0]*warmsave.substanz[1].masse)-(warmsave.substanz[0].masse*deltaQ[1]/deltaT[1]))))*sqr(warmsave.waage);
+sW:=sW+sqr(1/(warmsave.substanz[1].masse-warmsave.substanz[0].masse)*((deltaQ[0]/deltaT[0]*(warmsave.substanz[1].masse-warmsave.substanz[0].masse))-((deltaQ[0]/deltaT[0]*warmsave.substanz[1].masse)-(warmsave.substanz[0].masse*deltaQ[1]/deltaT[1]))))*sqr(warmsave.waage);
+sW:=sW+sqr((warmsave.substanz[1].masse/deltaT[0])*(1/(warmsave.substanz[1].masse-warmsave.substanz[0].masse)))*sqr(sdq[0]);
+sW:=sW+sqr((-warmsave.substanz[0].masse/deltaT[1])*(1/(warmsave.substanz[1].masse-warmsave.substanz[0].masse)))*sqr(sdq[1]);
+sW:=sW+sqr((1/(warmsave.substanz[1].masse-warmsave.substanz[0].masse))*(deltaT[0]-warmsave.substanz[1].masse*deltaQ[0])/sqr(deltaT[0]))*sqr(sdt[0]);
+sW:=sW+sqr((1/(warmsave.substanz[1].masse-warmsave.substanz[0].masse))*(warmsave.substanz[0].masse*deltaQ[1]-deltaT[0])/sqr(deltaT[1]))*sqr(sdt[1]);
+sw:=sqrt(sw);
+
+
+Label26.Caption:='mittlere Temperaturänderung: ( '+floattostr(roundto(mdt,-4))+' +- '+floattostr(roundto(sigmadt,-4))+' ) K/sec';
+Label20.Caption:='Heizleistung: ( '+floattostr(roundto(deltaQ[1],-4))+' +- '+floattostr(roundto(sdq[1],-4))+' ) J';
+label56.caption:='c0: ( '+floattostr(roundto(cW,-4))+' +- '+floattostr(roundto(scW,-4))+' ) J/(kg*K)';
+label12.caption:='W: ( '+floattostr(roundto(W,-4))+' +- '+floattostr(roundto(sW,-4))+' ) J/K';
+
+end;
+2:begin
+
+cK:=abs(1/warmsave.substanz[2].masse*(deltaq[2]/deltat[2]-(warmsave.wasserk*cW+W)));
+
+
+scK:=sqr(1/sqr(warmsave.substanz[2].masse)*((deltaq[2]/deltat[2])-(warmsave.wasserk*cW+W)))*sqr(warmsave.waage);
+scK:=scK+sqr(1/(warmsave.substanz[2].masse*deltat[2]))*sqr(sdq[2]);
+sck:=scK+sqr((deltaT[2]-deltaq[2])/(warmsave.substanz[2].masse*sqr(deltaT[2])))*sqr(sdt[2]);
+scK:=scK+sqr(-cW/warmsave.substanz[2].masse)*sqr(warmsave.waage);
+sck:=scK+sqr(warmsave.wasserk/warmsave.substanz[2].masse)*sqr(scW);
+scK:=sck+sqr(-1/warmsave.substanz[2].masse)*sqr(sW);
+scK:=sqrt(sck);
+
+Label39.Caption:='mittlere Temperaturänderung: ( '+floattostr(roundto(mdt,-4))+' +- '+floattostr(roundto(sigmadt,-4))+' ) K/sec';
+Label33.Caption:='Heizleistung: ( '+floattostr(roundto(deltaQ[2],-4))+' +- '+floattostr(roundto(sdq[2],-4))+' ) J';
+label57.caption:='cK: ( '+floattostr(roundto(cK,-4))+' +- '+floattostr(roundto(scK,-4))+' ) J/(kg*K)';
+
+end;
+3:begin
+
+cA:=abs(1/warmsave.substanz[3].masse*(deltaq[3]/deltat[3]-(warmsave.wassera*cW+W)));
+
+scA:=sqr(1/sqr(warmsave.substanz[3].masse)*((deltaq[3]/deltat[3])-(warmsave.wasserA*cW+W)))*sqr(warmsave.waage);
+scA:=scA+sqr(1/(warmsave.substanz[3].masse*deltat[3]))*sqr(sdq[3]);
+scA:=scA+sqr((deltaT[3]-deltaq[3])/(warmsave.substanz[3].masse*sqr(deltaT[3])))*sqr(sdt[3]);
+scA:=scA+sqr(-cW/warmsave.substanz[3].masse)*sqr(warmsave.waage);
+scA:=scA+sqr(-warmsave.wasserA/warmsave.substanz[3].masse)*sqr(scW);
+scA:=scA+sqr(-1/warmsave.substanz[3].masse)*sqr(sW);
+scA:=sqrt(scA);      
+
+Label52.Caption:='mittlere Temperaturänderung: ( '+floattostr(roundto(mdt,-4))+' +- '+floattostr(roundto(sigmadt,-4))+' ) K/sec';
+Label46.Caption:='Heizleistung: ( '+floattostr(roundto(deltaQ[3],-4))+' +- '+floattostr(roundto(sdq[3],-4))+' ) J';
+label58.caption:='cA: ( '+floattostr(roundto(cA,-4))+' +- '+floattostr(roundto(scA,-4))+' ) J/(kg*K)';
+
+end;
+end;
+
+
+
+
+end;
+
+
+procedure TForm4.Panel43Click(Sender: TObject);
+begin
+SavePictureDialog1.DefaultExt := GraphicExtension(Tbitmap);
+SavePictureDialog1.Filter := GraphicFilter(TBitmap);
+if SavePictureDialog1.Execute
+then                                                  //Bild speichern
+begin
+pic[0].SaveToFile(SavePictureDialog1.FileName);
+end;
+end;
+
+procedure TForm4.Panel44Click(Sender: TObject);
+begin
+SavePictureDialog1.DefaultExt := GraphicExtension(Tbitmap);
+SavePictureDialog1.Filter := GraphicFilter(TBitmap);
+if SavePictureDialog1.Execute
+then                                                  //Bild speichern
+begin
+pic[1].SaveToFile(SavePictureDialog1.FileName);
+end;
+end;
+
+procedure TForm4.Panel47Click(Sender: TObject);
+begin
+SavePictureDialog1.DefaultExt := GraphicExtension(Tbitmap);
+SavePictureDialog1.Filter := GraphicFilter(TBitmap);
+if SavePictureDialog1.Execute
+then                                                  //Bild speichern
+begin
+pic[2].SaveToFile(SavePictureDialog1.FileName);
+end;
+end;
+
+procedure TForm4.Panel48Click(Sender: TObject);
+begin
+SavePictureDialog1.DefaultExt := GraphicExtension(Tbitmap);
+SavePictureDialog1.Filter := GraphicFilter(TBitmap);
+if SavePictureDialog1.Execute
+then                                                  //Bild speichern
+begin
+pic[3].SaveToFile(SavePictureDialog1.FileName);
+end;
+end;
+
+  procedure Tform4.neuneu;
+  var i:integer;
+  begin                     //Löschen der Makse
+  Listbox1.Clear;
+Listbox2.Clear;
+Listbox3.Clear;
+Listbox4.Clear;
+Listbox5.Clear;
+Listbox6.Clear;
+Listbox7.Clear;
+Listbox8.Clear;            //Listen löschen
+Listbox9.Clear;
+Listbox10.Clear;
+Listbox11.Clear;
+Listbox12.Clear;
+
+edit1.text:='';
+edit2.Text:='';
+edit3.text:='';
+edit4.text:='';
+edit5.text:='';
+edit6.text:='';              //Textfelder löschen
+edit7.Text:='';
+edit8.text:='';
+edit9.text:='';
+edit10.text:='';
+edit11.text:='';
+
+edit13.text:='';
+edit14.text:='';
+edit15.text:='';
+edit16.text:='';
+
+edit18.text:='';
+edit19.text:='';
+edit20.text:='';
+edit21.text:='';
+
+label13.Caption:='mittlere Temperaturänderung:     K/sec ';
+label26.Caption:='mittlere Temperaturänderung:     K/sec ';
+label39.Caption:='mittlere Temperaturänderung:     K/sec ';
+label52.Caption:='mittlere Temperaturänderung:     K/sec ';
+
+Label7.Caption:='Heizleistung: ';
+label20.caption:='Heizleistung: ';
+label33.Caption:='Heizleistung: ';
+label46.caption:='Heizleistung: ';               //Beschriftungen zurücksetzen
+
+Label56.caption:='c0:';
+label57.caption:='cK:';
+label58.Caption:='cA:';
+Label12.Caption:='W:';
+
+for i:=0 to 3 do
+begin
+pic[i].canvas.brush.color:=clwhite;
+pic[i].Canvas.FillRect(rect(0,0,250,150));
+pic[i].Canvas.pen.Color:=clBlack;
+pic[i].Canvas.MoveTo(0,125);                   //Bilder löschen
+pic[i].canvas.LineTo(250,125);
+pic[i].Canvas.MoveTo(25,0);
+pic[i].Canvas.lineto(25,150);
+pic[i].canvas.pixels[26,85]:=clBlack;
+pic[i].canvas.pixels[27,85]:=clBlack;
+pic[i].canvas.pixels[24,85]:=clBlack;
+pic[i].canvas.pixels[45,124]:=clBlack;
+pic[i].canvas.pixels[45,123]:=clBlack;
+pic[i].canvas.pixels[45,126]:=clBlack;
+end;
+
+
+  end;
+
+
+procedure TForm4.Panel39Click(Sender: TObject);
+begin                          //Daten speichern
+datenlesen;
+if savedialog1.Execute
+then
+begin
+assignfile(F,savedialog1.FileName);
+rewrite(F);
+write(F,warmsave);
+closefile(F);
+end;
+end;
+
+procedure TForm4.Panel38Click(Sender: TObject);
+var i:integer;
+begin            //Daten laden
+if opendialog1.Execute
+then
+begin
+neuneu;
+assignfile(F,opendialog1.FileName);
+reset(F);                 //Datei öffnen
+read(F,warmsave);
+closefile(F);
+
+
+
+
+for i:=0 to warmsave.substanz[0].ct do             //Daten auf Maske übertragen
+listbox1.Items.Add(floattostr(warmsave.substanz[0].temp[i]));
+
+for i:=0 to warmsave.substanz[0].ct do
+listbox4.Items.Add(floattostr(warmsave.substanz[1].temp[i]));
+
+for i:=0 to warmsave.substanz[0].ct do
+listbox7.Items.Add(floattostr(warmsave.substanz[2].temp[i]));               
+for i:=0 to warmsave.substanz[0].ct do
+listbox10.Items.Add(floattostr(warmsave.substanz[3].temp[i]));
+                                        
+
+for i:=0 to 4 do
+listbox2.Items.Add(floattostr(warmsave.substanz[0].V[i]));
+for i:=0 to 4 do
+listbox3.Items.Add(floattostr(warmsave.substanz[0].A[i]));
+
+for i:=0 to 4 do
+listbox5.Items.Add(floattostr(warmsave.substanz[1].V[i]));
+for i:=0 to 4 do
+listbox6.Items.Add(floattostr(warmsave.substanz[1].A[i]));
+
+for i:=0 to 4 do
+listbox8.Items.Add(floattostr(warmsave.substanz[2].V[i]));
+for i:=0 to 4 do
+listbox9.Items.Add(floattostr(warmsave.substanz[2].A[i]));
+
+for i:=0 to 4 do
+listbox11.Items.Add(floattostr(warmsave.substanz[3].V[i]));
+for i:=0 to 4 do
+listbox12.Items.Add(floattostr(warmsave.substanz[3].A[i]));
+
+
+edit1.Text:=floattostr(warmsave.substanz[0].masse);
+
+edit6.Text:=floattostr(warmsave.substanz[1].masse);
+
+edit11.Text:=floattostr(warmsave.substanz[2].masse);
+
+edit16.Text:=floattostr(warmsave.substanz[3].masse);
+
+
+edit21.Text:=floattostr(warmsave.waage);
+
+edit2.text:=floattostr(warmsave.wasserk);
+
+edit7.Text:=floattostr(warmsave.wassera);
+
+
+
+end;
+end;
+
+end.

@@ -1,0 +1,33 @@
+program methoden;
+
+uses
+  Forms,
+  main in 'main.pas' {Form1},
+  zaehe in 'zaehe.pas' {Form2},
+  oberfl in 'oberfl.pas' {Form3},
+  warm in 'warm.pas' {Form4},
+  gas in 'gas.pas' {Form5},
+  batt in 'batt.pas' {Form6},
+  glueh in 'glueh.pas' {Form7},
+  wider in 'wider.pas' {Form8},
+  beug in 'beug.pas' {Form9},
+  linsen in 'linsen.pas' {Form10},
+  spekt in 'spekt.pas' {Form11};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TForm2, Form2);
+  Application.CreateForm(TForm3, Form3);
+  Application.CreateForm(TForm4, Form4);
+  Application.CreateForm(TForm5, Form5);
+  Application.CreateForm(TForm6, Form6);
+  Application.CreateForm(TForm7, Form7);
+  Application.CreateForm(TForm8, Form8);
+  Application.CreateForm(TForm9, Form9);
+  Application.CreateForm(TForm10, Form10);
+  Application.CreateForm(TForm11, Form11);
+  Application.Run;
+end.

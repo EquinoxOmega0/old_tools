@@ -1,0 +1,86 @@
+unit main;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, Spin, math;
+
+type
+  TForm1 = class(TForm)
+    GroupBox1: TGroupBox;
+    Label1: TLabel;
+    Label2: TLabel;
+    SpinEdit1: TSpinEdit;
+    SpinEdit2: TSpinEdit;
+    Button1: TButton;
+    Button2: TButton;
+    Edit1: TEdit;
+    Label3: TLabel;
+    procedure Button2Click(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+    function fakultaet(m:longint):extended;
+    function hypergeometrics(a,b,c,x:extended):extended;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+  n1,n2:integer;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.Button2Click(Sender: TObject);
+begin
+Close;
+end;
+
+function TForm1.fakultaet(m:longint):extended;
+var i:longint;
+    w:extended;
+begin      //
+w:=1;
+for i:=1 to m do
+w:=w*i;
+fakultaet:=w;
+end;
+
+function TForm1.hypergeometrics(a,b,c,x:extended):extended;
+var sum,zusatz,faktor:extended;
+    i:longint;
+begin      //
+
+sum:=1;
+faktor:=1;
+i:=0;
+repeat
+faktor:=faktor*(a+i)*(b+i)/(c+i);
+inc(i);
+zusatz:=faktor*power(x,i)/fakultaet(i);
+sum:=sum+zusatz;
+until zusatz=0;
+
+hypergeometrics:=sum;
+
+end;
+
+
+procedure TForm1.Button1Click(Sender: TObject);
+var ergebnis:extended;
+begin
+n1:=Spinedit1.Value;
+n2:=Spinedit2.Value;
+
+ergebnis:=32/3*power(n1,4)*sqr(n2)*power((n1-n2),(2*n1+2*n2-4))/power((n1+n2),(2*n1+2*n2+3));
+ergebnis:=ergebnis*(sqr(hypergeometrics(-n2,-n1+1,1,-4*n1*n2/sqr(n1-n2)))-sqr(hypergeometrics(-n2+1,-n1,1,-4*n1*n2/sqr(n1-n2))));
+
+//ergebnis:=32/(3*PI*sqrt(3))*power(1/sqr(n2)-1/sqr(n1),-2)/(power(n1,3)*power(n2,5));
+      edit1.Text:=floattostr(ergebnis);
+end;
+
+end.

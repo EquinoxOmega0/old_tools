@@ -1,0 +1,127 @@
+object Form1: TForm1
+  Left = 192
+  Top = 114
+  Width = 352
+  Height = 744
+  Cursor = crHandPoint
+  Caption = 'Methoden der experimentellen Physik'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 8
+    Top = 8
+    Width = 329
+    Height = 57
+    Cursor = crHandPoint
+    Caption = 'Bestimmung der Z'#228'higkeit einer Fl'#252'ssigkeit'
+    TabOrder = 0
+    OnClick = Panel1Click
+  end
+  object Panel2: TPanel
+    Left = 8
+    Top = 72
+    Width = 329
+    Height = 57
+    Cursor = crHandPoint
+    Caption = 'Oberfl'#228'chenspannung'
+    TabOrder = 1
+    OnClick = Panel2Click
+  end
+  object Panel3: TPanel
+    Left = 8
+    Top = 648
+    Width = 329
+    Height = 57
+    Cursor = crHandPoint
+    Caption = 'Programm beenden'
+    TabOrder = 2
+    OnClick = Panel3Click
+  end
+  object Panel4: TPanel
+    Left = 8
+    Top = 136
+    Width = 329
+    Height = 57
+    Cursor = crHandPoint
+    Caption = 'Bestimmung von W'#228'rmekapazit'#228'ten'
+    TabOrder = 3
+    OnClick = Panel4Click
+  end
+  object Panel5: TPanel
+    Left = 8
+    Top = 200
+    Width = 329
+    Height = 57
+    Cursor = crHandPoint
+    Caption = 'Gasthermometer'
+    TabOrder = 4
+    OnClick = Panel5Click
+  end
+  object Panel6: TPanel
+    Left = 8
+    Top = 264
+    Width = 329
+    Height = 57
+    Cursor = crHandPoint
+    Caption = 'Innenwiderstand von Batterie'
+    TabOrder = 5
+    OnClick = Panel6Click
+  end
+  object Panel7: TPanel
+    Left = 8
+    Top = 328
+    Width = 329
+    Height = 57
+    Cursor = crHandPoint
+    Caption = 'Widerstand von Gl'#252'hlampe'
+    TabOrder = 6
+    OnClick = Panel7Click
+  end
+  object Panel8: TPanel
+    Left = 8
+    Top = 392
+    Width = 329
+    Height = 57
+    Cursor = crHandPoint
+    Caption = 'Bestimmung von Widerst'#228'nden und Str'#246'men'
+    TabOrder = 7
+    OnClick = Panel8Click
+  end
+  object Panel9: TPanel
+    Left = 8
+    Top = 456
+    Width = 329
+    Height = 57
+    Cursor = crHandPoint
+    Caption = 'Gitterbeugung'
+    TabOrder = 8
+    OnClick = Panel9Click
+  end
+  object Panel10: TPanel
+    Left = 8
+    Top = 584
+    Width = 329
+    Height = 57
+    Cursor = crHandPoint
+    Caption = 'Linsensysteme'
+    TabOrder = 9
+    OnClick = Panel10Click
+  end
+  object Panel11: TPanel
+    Left = 8
+    Top = 520
+    Width = 329
+    Height = 57
+    Cursor = crHandPoint
+    Caption = 'Spektroskopie'
+    TabOrder = 10
+    OnClick = Panel11Click
+  end
+end
