@@ -1,0 +1,6 @@
+ CPU-Zeit:           5.53125000000   unopti
+ CPU-Zeit:           5.15625000000   opti
+ CPU-Zeit:           5.23437500000   unopti
+ CPU-Zeit:           5.98437500000   opti
+ CPU-Zeit:           5.90625000000   unopti
+ CPU-Zeit:           5.78125000000   opti

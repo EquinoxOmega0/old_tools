@@ -1,0 +1,7 @@
+Runtime error from program:c:\dokumente und einstellungen\equinoxomega\eigene dateien\studium\numerisches praktikum\aufgabe 3\
+Run-time Error
+ *** Error   29, Call to missing routine : _RTSAFE at 0x004019ae.
+
+
+ main -  in file galaxien.f95 at line 84 [+0653] [recur=  1] 
+
