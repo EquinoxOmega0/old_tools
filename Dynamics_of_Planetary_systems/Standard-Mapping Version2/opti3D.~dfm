@@ -1,0 +1,297 @@
+object Form6: TForm6
+  Left = 272
+  Top = 135
+  BorderStyle = bsDialog
+  Caption = '3D-Optimierung'
+  ClientHeight = 332
+  ClientWidth = 487
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  OnClose = FormClose
+  OnCloseQuery = FormCloseQuery
+  PixelsPerInch = 96
+  TextHeight = 13
+  object PaintBox1: TPaintBox
+    Left = 8
+    Top = 8
+    Width = 200
+    Height = 200
+    Cursor = crCross
+  end
+  object Gauge1: TGauge
+    Left = 256
+    Top = 280
+    Width = 225
+    Height = 17
+    ForeColor = clBlue
+    Progress = 0
+  end
+  object GroupBox1: TGroupBox
+    Left = 216
+    Top = 0
+    Width = 265
+    Height = 73
+    Caption = 'Datei'
+    TabOrder = 0
+    object Label1: TLabel
+      Left = 8
+      Top = 20
+      Width = 22
+      Height = 13
+      Caption = 'Pfad'
+    end
+    object Edit1: TEdit
+      Left = 40
+      Top = 12
+      Width = 217
+      Height = 21
+      TabOrder = 0
+    end
+    object Button3: TButton
+      Left = 8
+      Top = 40
+      Width = 65
+      Height = 25
+      Cursor = crHandPoint
+      Caption = '...'
+      TabOrder = 1
+      OnClick = Button3Click
+    end
+    object Button4: TButton
+      Left = 80
+      Top = 40
+      Width = 177
+      Height = 25
+      Cursor = crHandPoint
+      Caption = 'Daten laden'
+      TabOrder = 2
+      OnClick = Button4Click
+    end
+  end
+  object GroupBox2: TGroupBox
+    Left = 216
+    Top = 72
+    Width = 265
+    Height = 137
+    Caption = 'Daten der Datei'
+    TabOrder = 1
+    object Label2: TLabel
+      Left = 8
+      Top = 16
+      Width = 61
+      Height = 13
+      Caption = 'x-Aufl'#246'sung: '
+    end
+    object Label3: TLabel
+      Left = 8
+      Top = 40
+      Width = 61
+      Height = 13
+      Caption = 'y-Aufl'#246'sung: '
+    end
+    object Label4: TLabel
+      Left = 8
+      Top = 64
+      Width = 62
+      Height = 13
+      Caption = 'k-Aufl'#246'sung: '
+    end
+    object Label5: TLabel
+      Left = 8
+      Top = 88
+      Width = 25
+      Height = 13
+      Caption = 'kmin:'
+    end
+    object Label6: TLabel
+      Left = 8
+      Top = 112
+      Width = 28
+      Height = 13
+      Caption = 'kmax:'
+    end
+    object Label7: TLabel
+      Left = 136
+      Top = 16
+      Width = 56
+      Height = 13
+      Caption = 'Iterationen: '
+    end
+    object Label9: TLabel
+      Left = 136
+      Top = 40
+      Width = 67
+      Height = 13
+      Caption = 'Datenmenge: '
+    end
+    object Label10: TLabel
+      Left = 136
+      Top = 64
+      Width = 68
+      Height = 13
+      Caption = 'Inselvolumen: '
+    end
+    object Label11: TLabel
+      Left = 136
+      Top = 88
+      Width = 60
+      Height = 13
+      Caption = 'W'#228'ndezahl: '
+    end
+    object Label17: TLabel
+      Left = 136
+      Top = 112
+      Width = 69
+      Height = 13
+      Caption = 'Gesammtzahl: '
+    end
+  end
+  object Button1: TButton
+    Left = 256
+    Top = 216
+    Width = 225
+    Height = 25
+    Cursor = crHandPoint
+    Caption = 'Teildaten anzeigen'
+    TabOrder = 2
+  end
+  object Button2: TButton
+    Left = 256
+    Top = 248
+    Width = 225
+    Height = 25
+    Cursor = crHandPoint
+    Caption = 'Optimierte 3D-Datei erstellen'
+    TabOrder = 3
+    OnClick = Button2Click
+  end
+  object GroupBox3: TGroupBox
+    Left = 8
+    Top = 208
+    Width = 241
+    Height = 49
+    Caption = 'Teildaten anzeigen'
+    TabOrder = 4
+    object Label8: TLabel
+      Left = 8
+      Top = 24
+      Width = 57
+      Height = 13
+      Caption = 'Bildnummer:'
+    end
+    object Label12: TLabel
+      Left = 152
+      Top = 24
+      Width = 35
+      Height = 13
+      Caption = 'bei k = '
+    end
+    object SpinEdit1: TSpinEdit
+      Left = 72
+      Top = 16
+      Width = 73
+      Height = 22
+      MaxValue = 0
+      MinValue = 0
+      TabOrder = 0
+      Value = 0
+    end
+  end
+  object Button5: TButton
+    Left = 256
+    Top = 304
+    Width = 225
+    Height = 25
+    Cursor = crHandPoint
+    Caption = 'Beenden'
+    TabOrder = 5
+    OnClick = Button5Click
+  end
+  object GroupBox4: TGroupBox
+    Left = 8
+    Top = 256
+    Width = 241
+    Height = 73
+    Caption = 'Zoomen'
+    TabOrder = 6
+    object Label13: TLabel
+      Left = 8
+      Top = 24
+      Width = 21
+      Height = 13
+      Caption = 'xmin'
+    end
+    object Label14: TLabel
+      Left = 104
+      Top = 24
+      Width = 24
+      Height = 13
+      Caption = 'xmax'
+    end
+    object Label15: TLabel
+      Left = 8
+      Top = 48
+      Width = 21
+      Height = 13
+      Caption = 'ymin'
+    end
+    object Label16: TLabel
+      Left = 104
+      Top = 48
+      Width = 24
+      Height = 13
+      Caption = 'ymax'
+    end
+    object Edit2: TEdit
+      Left = 40
+      Top = 16
+      Width = 57
+      Height = 21
+      TabOrder = 0
+      Text = '0'
+    end
+    object Edit3: TEdit
+      Left = 136
+      Top = 16
+      Width = 57
+      Height = 21
+      TabOrder = 1
+      Text = '0'
+    end
+    object Edit4: TEdit
+      Left = 40
+      Top = 40
+      Width = 57
+      Height = 21
+      TabOrder = 2
+      Text = '0'
+    end
+    object Edit5: TEdit
+      Left = 136
+      Top = 40
+      Width = 57
+      Height = 21
+      TabOrder = 3
+      Text = '0'
+    end
+    object Button6: TButton
+      Left = 200
+      Top = 16
+      Width = 33
+      Height = 49
+      Cursor = crHandPoint
+      Caption = 'Zoom'
+      TabOrder = 4
+    end
+  end
+  object OpenDialog1: TOpenDialog
+    Filter = 'info.dat|*info.dat'
+    Left = 440
+    Top = 8
+  end
+end
