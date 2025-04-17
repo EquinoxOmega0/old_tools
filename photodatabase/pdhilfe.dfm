@@ -1,0 +1,49 @@
+object Form7: TForm7
+  Left = 358
+  Top = 226
+  BorderStyle = bsDialog
+  Caption = 'Photodatabase - Hilfe'
+  ClientHeight = 336
+  ClientWidth = 322
+  Color = clSkyBlue
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clBlue
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Memo1: TMemo
+    Left = 8
+    Top = 8
+    Width = 305
+    Height = 273
+    Color = clMoneyGreen
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clGreen
+    Font.Height = -13
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
+    ScrollBars = ssVertical
+    TabOrder = 0
+  end
+  object Panel1: TPanel
+    Left = 8
+    Top = 288
+    Width = 305
+    Height = 41
+    Cursor = crHandPoint
+    Caption = 'Schlie'#223'en'
+    Color = clGradientInactiveCaption
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clGreen
+    Font.Height = -16
+    Font.Name = 'Times New Roman'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 1
+    OnClick = Panel1Click
+  end
+end

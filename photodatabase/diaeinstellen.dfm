@@ -1,0 +1,203 @@
+object Form5: TForm5
+  Left = 371
+  Top = 193
+  BorderStyle = bsDialog
+  Caption = 'Photodatabase - Diashow einstellen'
+  ClientHeight = 287
+  ClientWidth = 312
+  Color = clSkyBlue
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clBlue
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object GroupBox1: TGroupBox
+    Left = 8
+    Top = 8
+    Width = 297
+    Height = 89
+    Caption = 'Bildwechsel'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clGreen
+    Font.Height = -13
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 0
+    object Label1: TLabel
+      Left = 200
+      Top = 56
+      Width = 76
+      Height = 15
+      Caption = 'Millisekunden'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clGreen
+      Font.Height = -13
+      Font.Name = 'Times New Roman'
+      Font.Style = []
+      ParentFont = False
+    end
+    object RadioButton1: TRadioButton
+      Left = 8
+      Top = 56
+      Width = 105
+      Height = 17
+      Caption = 'automatisch alle'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clGreen
+      Font.Height = -13
+      Font.Name = 'Times New Roman'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 0
+    end
+    object SpinEdit1: TSpinEdit
+      Left = 120
+      Top = 48
+      Width = 73
+      Height = 24
+      Color = clMoneyGreen
+      MaxValue = 100000
+      MinValue = 1
+      TabOrder = 1
+      Value = 2000
+    end
+    object RadioButton2: TRadioButton
+      Left = 8
+      Top = 24
+      Width = 113
+      Height = 17
+      Caption = 'manuell'
+      Checked = True
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clGreen
+      Font.Height = -13
+      Font.Name = 'Times New Roman'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 2
+      TabStop = True
+    end
+  end
+  object GroupBox2: TGroupBox
+    Left = 8
+    Top = 104
+    Width = 297
+    Height = 129
+    Caption = 'Anzeigeoptionen'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clGreen
+    Font.Height = -13
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 1
+    object Label2: TLabel
+      Left = 192
+      Top = 96
+      Width = 5
+      Height = 15
+      Caption = 'x'
+    end
+    object RadioButton3: TRadioButton
+      Left = 8
+      Top = 24
+      Width = 137
+      Height = 17
+      Caption = 'maximale Anpassung'
+      Checked = True
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clGreen
+      Font.Height = -13
+      Font.Name = 'Times New Roman'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 0
+      TabStop = True
+    end
+    object RadioButton4: TRadioButton
+      Left = 8
+      Top = 48
+      Width = 113
+      Height = 17
+      Caption = 'Vollbild'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clGreen
+      Font.Height = -13
+      Font.Name = 'Times New Roman'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 1
+    end
+    object RadioButton5: TRadioButton
+      Left = 8
+      Top = 72
+      Width = 113
+      Height = 17
+      Caption = 'Originalgr'#246#223'e'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clGreen
+      Font.Height = -13
+      Font.Name = 'Times New Roman'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 2
+    end
+    object RadioButton6: TRadioButton
+      Left = 8
+      Top = 96
+      Width = 113
+      Height = 17
+      Caption = 'einheitliche Gr'#246#223'e'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clGreen
+      Font.Height = -13
+      Font.Name = 'Times New Roman'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 3
+    end
+    object SpinEdit2: TSpinEdit
+      Left = 136
+      Top = 88
+      Width = 49
+      Height = 24
+      Color = clMoneyGreen
+      MaxValue = 5000
+      MinValue = 10
+      TabOrder = 4
+      Value = 500
+    end
+    object SpinEdit3: TSpinEdit
+      Left = 208
+      Top = 88
+      Width = 49
+      Height = 24
+      Color = clMoneyGreen
+      MaxValue = 5000
+      MinValue = 10
+      TabOrder = 5
+      Value = 500
+    end
+  end
+  object Panel1: TPanel
+    Left = 8
+    Top = 240
+    Width = 297
+    Height = 41
+    Cursor = crHandPoint
+    Caption = 'Annehmen und Schlie'#223'en'
+    Color = clGradientInactiveCaption
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clGreen
+    Font.Height = -16
+    Font.Name = 'Times New Roman'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 2
+    OnClick = Button1Click
+  end
+end
